@@ -1,0 +1,127 @@
+/* Layout principal */
+.home-container {
+  min-height: calc(100vh - var(--navbar-height));
+  padding: 2rem 1rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Hero */
+.home-hero {
+  background: #e9f0ff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.home-hero h1 {
+  font-size: 2.25rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.home-hero p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Botões */
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-home {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-home:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-home.agendar {
+  background-color: var(--success);
+}
+
+.btn-home.agendar:hover {
+  background-color: var(--sucess);
+}
+
+/* Funcionalidades */
+.home-features {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card-feature {
+  background-color: var(--white);
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  transition: var(--transition);
+  min-height: 160px;
+}
+
+
+.card-feature:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.card-feature h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.card-feature p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .home-container {
+    padding: 3rem 2rem;
+  }
+
+  .home-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

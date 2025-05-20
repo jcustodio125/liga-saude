@@ -1,0 +1,118 @@
+.barra-acessibilidade {
+  background-color: var(--primary-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  font-size: 0.85rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.grupo-acessibilidade {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.grupo-label {
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+/* Botões e select */
+.barra-acessibilidade button,
+.barra-acessibilidade select {
+  background-color: white;
+  color: var(--primary-dark);
+  border: 1px solid white;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.barra-acessibilidade button:hover,
+.barra-acessibilidade select:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: white;
+}
+
+/* Botão de contraste */
+.botao-contraste.ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.botao-contraste svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Modo alto contraste */
+body.modo-alto-contraste {
+  background-color: #000 !important;
+  color: #fff !important;
+  font-family: Arial, sans-serif;
+}
+
+body.modo-alto-contraste * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+body.modo-alto-contraste .btn,
+body.modo-alto-contraste button {
+  background-color: #fff !important;
+  color: #000 !important;
+  font-weight: bold;
+  border: 2px solid #fff !important;
+}
+
+body.modo-alto-contraste input,
+body.modo-alto-contraste select,
+body.modo-alto-contraste textarea {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+body.modo-alto-contraste a {
+  color: #0ff !important;
+  text-decoration: underline !important;
+}
+
+body.modo-alto-contraste *:focus {
+  outline: 2px dashed yellow !important;
+  outline-offset: 3px;
+}
+
+/* Controle de fonte */
+body.fonte-normal {
+  font-size: 100%;
+}
+
+body.fonte-grande {
+  font-size: 120%;
+}
+
+body.fonte-extra {
+  font-size: 140%;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .barra-acessibilidade {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

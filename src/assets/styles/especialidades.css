@@ -1,0 +1,36 @@
+.container-tabela {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.cabecalho-tabela {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.cabecalho-tabela h2 {
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.btn.adicionar {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn.adicionar:hover {
+  background-color: var(--primary-dark);
+}

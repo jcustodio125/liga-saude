@@ -1,0 +1,107 @@
+/* src/assets/styles/global.css */
+
+/* Variáveis de estilo */
+:root {
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+  --success: #28a745;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+  --white: #fff;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --navbar-height: 72px;
+
+  /* Tamanho base da fonte */
+  --font-size-normal: 1rem;    /* 16px */
+  --font-size-grande: 1.2rem;   /* ~19px */
+  --font-size-extra: 1.4rem;    /* ~22px */
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+/* Estilo global */
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px; /* Base */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f6fa;
+  color: #333;
+  line-height: 1.6;
+  font-size: var(--font-size-normal);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Herança de família e tamanho de fonte */
+body.fonte-normal {
+  font-size: var(--font-size-normal);
+}
+
+body.fonte-grande {
+  font-size: var(--font-size-grande);
+}
+
+body.fonte-extra {
+  font-size: var(--font-size-extra);
+}
+
+/* Elementos de texto */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Inputs, selects e botões */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 4px;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}

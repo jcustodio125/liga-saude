@@ -1,0 +1,91 @@
+/* src/assets/styles/disponibilidade.css */
+
+.disponibilidade-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-size: inherit;
+}
+
+.disponibilidade-container h2 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filtros select,
+.filtros input[type="date"] {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+}
+
+.btn.buscar {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn.buscar:hover {
+  background-color: var(--primary-dark);
+}
+
+.grade-horarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.horario {
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.horario.disponivel {
+  border-left: 4px solid var(--success);
+}
+
+.horario.indisponivel {
+  opacity: 0.6;
+  border-left: 4px solid #ccc;
+}
+
+.status {
+  font-weight: 600;
+  color: var(--success);
+}
+
+.status.ocupado {
+  color: #dc3545;
+}
+
+.nenhum {
+  text-align: center;
+  color: var(--gray);
+  font-style: italic;
+  margin-top: 2rem;
+}
